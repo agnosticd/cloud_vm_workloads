@@ -1,4 +1,4 @@
 ---
 - name: Import user data from agnosticV
-  agnosticd_user_info:
+  agnosticd.core.agnosticd_user_info:
     data: "{{ agnosticv_importdata }}"
