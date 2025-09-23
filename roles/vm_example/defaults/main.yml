@@ -10,7 +10,7 @@
 # your workload via the AgnosticV configuration.
 
 # Documentation for variable 1 (what does it do? what are valid options?)
-ns_example_variable_1: "value 1"
+vm_example_variable_1: "value 1"
 
 # Documentation for variable 2 (what does it do? what are valid options?)
-ns_example_variable_2: "value 2"
+vm_example_variable_2: "value 2"
