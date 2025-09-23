@@ -3,7 +3,7 @@
 Import custom defined user_data with a yaml dictionary named agnosticv_importdata.
 
 ## Requirements
-agnosticd_user_info
+agnosticd.core.agnosticd_user_info
 
 ## Role Variables
 
