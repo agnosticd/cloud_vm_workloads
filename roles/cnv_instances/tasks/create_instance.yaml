@@ -190,8 +190,7 @@
         name: "{{ _instance_name }}"
         namespace: "{{ openshift_cnv_namespace }}"
         annotations: >-
-          {{ cloud_tags_final
-          | combine(_instance.metadata|default({})) | combine(_instance.tags|default({}) | ec2_tags_to_dict) }}
+          {{ _instance.metadata|default({}) | combine(_instance.tags|default({})) | default({}) }}
       spec:
         dataVolumeTemplates: >-
          {{ _datavolume | from_yaml + (_instance.disks | default([]) | to_json | replace('INSTANCENAME',_instance_name) | from_json) + (_instance.cdroms | default([]) | to_json | replace('INSTANCENAME',_instance_name) | from_json) }}
