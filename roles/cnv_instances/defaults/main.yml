@@ -13,7 +13,7 @@ cnv_instances: []
 
 instances: "{{ cnv_instances }}"
 
-openshift_cnv_namespace: "{{ sandbox_openshift_namespace.split('-')[0] }}"
+openshift_cnv_namespace: "{{ sandbox_openshift_namespace }}"
 
 # Naming of instances
 openshift_cnv_instance_numeration: '%d'
