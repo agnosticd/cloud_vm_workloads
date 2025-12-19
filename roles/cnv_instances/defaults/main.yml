@@ -11,7 +11,7 @@
 
 cnv_instances: []
 
-instances: {{ cnv_instances }}
+instances: "{{ cnv_instances }}"
 
 openshift_cnv_namespace: "{{ sandbox_openshift_namespace }}"
 
