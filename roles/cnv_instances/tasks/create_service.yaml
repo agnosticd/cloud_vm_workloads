@@ -22,6 +22,11 @@
 
 - name: Add passthrough service to the nested OCP cluster
   when: cnv_instances_passthrough_namespace | default("") != ""
+  module_defaults:
+    group/k8s:
+      host: "{{ openshift_api_url }}"
+      api_key: "{{ openshift_cluster_admin_token }}"
+      validate_certs: false
   block:
     - name: Add Service
       kubernetes.core.k8s:
