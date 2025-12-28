@@ -41,8 +41,6 @@
         spec: |
           ports:
             {{ service.ports }}
-          selector:
-            vm.cnv.io/name: "{{ _instance.name }}"
           type: {{ service.type | default('ClusterIP') }}
     - name: Add EndpointSlice
       kubernetes.core.k8s:
@@ -52,8 +50,8 @@
           metadata:
             name: "{{ service.name }}"
             namespace: "{{ cnv_instances_passthrough_namespace }}"
-          labels:
-            kubernetes.io/service-name: "{{ service.name }}"
+            labels:
+              kubernetes.io/service-name: "{{ service.name }}"
           addressType: IPv4
           endpoints:
             - addresses:
