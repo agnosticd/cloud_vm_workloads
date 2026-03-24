@@ -49,7 +49,7 @@
     dest: "{{ letsencrypt_cert_dest_private_key }}"
     remote_src: true
     owner: "{{ letsencrypt_cert_owner | default(omit) }}"
-    mode: 0644
+    mode: "0644"
 
 - name: Copy letsencrypt certificate
   when: letsencrypt_cert_dest_fullchain_crt is defined
@@ -58,4 +58,4 @@
     dest: "{{ letsencrypt_cert_dest_fullchain_crt }}"
     remote_src: true
     owner: "{{ letsencrypt_cert_owner | default(omit) }}"
-    mode: 0644
+    mode: "0644"
