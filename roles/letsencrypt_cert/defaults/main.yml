@@ -5,8 +5,8 @@ letsencrypt_cert_hostname: >-
 letsencrypt_cert_encrypt_mail: "{{ email | default('devops@opentlc.com') }}"
 
 # Define paths to run copy
-# letsencrypt_cert_dest_private_key: 
+# letsencrypt_cert_dest_private_key:
 # letsencrypt_cert_dest_fullchain_crt:
 
 # Default owner is Omit
-# letsencrypt_cert_owner: 
+# letsencrypt_cert_owner:
